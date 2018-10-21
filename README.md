@@ -96,7 +96,7 @@ Main files of the repository:
         duel_ddqn_checkpoint.pth (ddqn + dueling model)
  
     - Installation notes and tips, brief description of the project
-        myREADME.md
+        README.md
 
     - Udacity original readme for instalation of the envirionment.
         Udacity_README.md
