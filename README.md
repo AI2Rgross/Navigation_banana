@@ -1,6 +1,7 @@
-#Navigation Project
+# Navigation Project
 
-#Introduction
+
+## Introduction
 In this project, I trained an agent to navigate and collect bananas in a large, square world.
 
 A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana. Thus, the goal of my agent is to collect as many yellow bananas as possible while avoiding blue bananas.
@@ -15,14 +16,15 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 The task is episodic, and in order to solve the environment, the agent must get an average score of +13 over 100 consecutive episodes.
 
 
-#Requirement
+## Requirement
+
 As I am working under ubuntu 16.04, I will give you a few tips to make it run smoothly. But, I recommand you to follow the instruction on the Udacity DRL github: https://github.com/udacity/deep-reinforcement-learning/blob/master/p1_navigation/README.md. Especially, if you work under a different OS.
 
 You can also have a look at:
 https://github.com/udacity/deep-reinforcement-learning/blob/master/README.md
  
 
-#For ubuntu 16.04
+## For ubuntu 16.04
 
 dowload the repo:
 https://github.com/AIRgr/Navigation
@@ -30,7 +32,8 @@ https://github.com/AIRgr/Navigation
 dowload the file https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip
 Place the file in the GitHub repository, in the Navigation/ folder, and unzip the file.
 
-#Tips to prepare the environement:
+
+## Tips to prepare the environement:
  
 - Python 3
 Check if you have a one of the following python versionn: 3.5.x or 3.6.x
@@ -62,7 +65,7 @@ In order to run the notebook with python 3 also install ipyton.
 sudo pip3 install ipython[all]
 
 
-#Requirements for the navigation project:
+## Requirements for the navigation project:
  
 Go inside the navigation_p1 repo, and open a terminal in order to install the requirements:
 pip3 install -r requirements.txt
@@ -77,9 +80,9 @@ env = UnityEnvironment(file_name="AIRgr/deep-reinforcement-learning/p1_navigatio
 
 Now everything is ready to either train your own solution or run the pre-computer solution.
 
-My files
-======
- 
+
+## My files
+
 Main files of the repository:
 
     Navigation/
@@ -108,7 +111,7 @@ Main files of the repository:
             Report.pdf
 
 
-References
+## References
 
     Schaul, T., Quan, J., Antonoglou, I., & Silver, D. Prioritized Experience Replay. arXiv.org, 2015.
     Van Hasselt, H., Guez, A., & AAAI, D. S. Deep Reinforcement Learning with Double Q-Learning. Aaai.org, 2016.
