@@ -24,7 +24,7 @@ You can also have a look at:
 https://github.com/udacity/deep-reinforcement-learning/blob/master/README.md
  
 
-## For ubuntu 16.04
+### For ubuntu 16.04
 
 dowload the repo:
 https://github.com/AIRgr/Navigation
@@ -33,7 +33,7 @@ dowload the file https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Bana
 Place the file in the GitHub repository, in the Navigation/ folder, and unzip the file.
 
 
-## Tips to prepare the environement:
+### Tips to prepare the environement
  
 - Python 3
 Check if you have a one of the following python versionn: 3.5.x or 3.6.x
@@ -55,8 +55,6 @@ pip3 install .
 if there is any trouble have a look at:
 https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md
 
- 
-
 - Install unity
 pip3 install unity
 
@@ -65,18 +63,18 @@ In order to run the notebook with python 3 also install ipyton.
 sudo pip3 install ipython[all]
 
 
-## Requirements for the navigation project:
+### Requirements for the navigation project
  
-Go inside the navigation_p1 repo, and open a terminal in order to install the requirements:
+Go inside the Navigation repo, and open a terminal in order to install the requirements:
 pip3 install -r requirements.txt
 Then run the next command to open a notebook:
 ipython3 notebook
 
 click on Navigation.ipynb to open it.
-Try to run the first cell to check if UnityEnvironment is well installed.
+Try to run the first cell where the libraries are imported to check if UnityEnvironment is well installed.
 
-In the second cell correct the path of the Banana.x86_64 and try running it.
-env = UnityEnvironment(file_name="AIRgr/deep-reinforcement-learning/p1_navigation/Banana_Linux/Banana.x86_64")
+Then, in the next cell correct the path of the Banana.x86_64 and try running it.
+env = UnityEnvironment(file_name="the_path_here/Banana_Linux/Banana.x86_64")
 
 Now everything is ready to either train your own solution or run the pre-computer solution.
 
@@ -84,38 +82,35 @@ Now everything is ready to either train your own solution or run the pre-compute
 ## My files
 
 Main files of the repository:
+    - The main part of the code: point for starting the environment, train the agent or test a solution.
+        Navigation.ipynb
+    - the Agent class with dqn, ddqn, and othes basic functions to interact with the environment. The Replay buffer class.
+        agent.py
+    - The Pytorch neural networks and dueling network used to approximate the Q-value functions used by the agent.
+        model.py
 
-    Navigation/
-        - The main part of the code: point for starting the environment, train the agent or test a solution.
-            Navigation.ipynb
-
-        - the Agent class with dqn, ddqn, and othes basic functions to interact with the environment. The Replay buffer class.
-            agent.py
-
-        - The Pytorch neural networks and dueling network used to approximate the Q-value functions used by the agent.
-            model.py
-
-        - the weights of the pytorch model for dqn,ddqn, dueling dqn and dueling ddqn for the solved environment.
-            dqn_checkpoint.pth  (dqn)
-            ddqn_checkpoint.pth (ddqn)
-            duel_dqn_checkpoint.pth (dqn + dueling model)
-            duel_ddqn_checkpoint.pth (ddqn + dueling model)
+    - the weights of the pytorch model for dqn,ddqn, dueling dqn and dueling ddqn for the solved environment.
+        dqn_checkpoint.pth  (dqn)
+        ddqn_checkpoint.pth (ddqn)
+        duel_dqn_checkpoint.pth (dqn + dueling model)
+        duel_ddqn_checkpoint.pth (ddqn + dueling model)
  
-        - Installation notes and tips, brief description of the project
-            myREADME.md
+    - Installation notes and tips, brief description of the project
+        README.md
 
-        - Udacity original readme for instalation of the envirionment.
-            Udacity_README.md
+    - Udacity original readme for instalation of the envirionment.
+        Udacity_README.md
 
-        - My notes about DQN, DDQN, Duelling network
-            Report.pdf
+    - My notes about DQN, DDQN, Duelling network
+        Report.pdf
 
 
 ## References
 
     Schaul, T., Quan, J., Antonoglou, I., & Silver, D. Prioritized Experience Replay. arXiv.org, 2015.
     Van Hasselt, H., Guez, A., & AAAI, D. S. Deep Reinforcement Learning with Double Q-Learning. Aaai.org, 2016.
-    Minh, V., Kavukcuoglu, K., Silver, D., Rusu, A. A., Veness, J., Bellemare, M. G., et al. Human-level control through deep reinforcement learning. Nature, 52015.
+    Mnih, V., Kavukcuoglu, K., Silver, D., Rusu, A. A., Veness, J., Bellemare, M. G., et al. Human-level control through deep reinforcement learning. Nature, 52015.
+
 
 
 
