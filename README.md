@@ -95,8 +95,8 @@ Main files of the repository:
     - the weights of the pytorch model for dqn,ddqn, dueling dqn and dueling ddqn of the solved environment.
         dqn_checkpoint.pth  (dqn)
         ddqn_checkpoint.pth (ddqn)
-        duel_dqn_checkpoint.pth (dqn + dueling model)
-        duel_ddqn_checkpoint.pth (ddqn + dueling model)
+        duel_dqn_checkpoint.pth (dqn + dueling network)
+        duel_ddqn_checkpoint.pth (ddqn + dueling network)
  
     - Installation notes and tips, brief description of the project
         README.md
