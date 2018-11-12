@@ -82,10 +82,13 @@ Now everything is ready to either train your own solution or run the pre-compute
 ## My files
 
 Main files of the repository:
+
     - The main part of the code: point for starting the environment, train the agent or test a solution.
         Navigation.ipynb
+
     - the Agent class with dqn, ddqn, and othes basic functions to interact with the environment. The Replay buffer class.
         agent.py
+
     - The Pytorch neural networks and dueling network used to approximate the Q-value functions used by the agent.
         model.py
 
