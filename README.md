@@ -106,3 +106,5 @@ Main files of the repository:
 
     - My notes about DQN, DDQN, Duelling network
         Report.pdf
+
+The code I developped to solve the banana environement is based on the dqn exercice from the UDACITY DRL github available here: https://github.com/udacity/deep-reinforcement-learning. 
