@@ -89,7 +89,7 @@ Main files of the repository:
     - The Pytorch neural networks and dueling network used to approximate the Q-value functions used by the agent.
         model.py
 
-    - the weights of the pytorch model for dqn,ddqn, dueling dqn and dueling ddqn for the solved environment.
+    - the weights of the pytorch model for dqn,ddqn, dueling dqn and dueling ddqn of the solved environment.
         dqn_checkpoint.pth  (dqn)
         ddqn_checkpoint.pth (ddqn)
         duel_dqn_checkpoint.pth (dqn + dueling model)
@@ -103,15 +103,3 @@ Main files of the repository:
 
     - My notes about DQN, DDQN, Duelling network
         Report.pdf
-
-
-## References
-
-    Schaul, T., Quan, J., Antonoglou, I., & Silver, D. Prioritized Experience Replay. arXiv.org, 2015.
-    Van Hasselt, H., Guez, A., & AAAI, D. S. Deep Reinforcement Learning with Double Q-Learning. Aaai.org, 2016.
-    Mnih, V., Kavukcuoglu, K., Silver, D., Rusu, A. A., Veness, J., Bellemare, M. G., et al. Human-level control through deep reinforcement learning. Nature, 52015.
-
-
-
-
-
