@@ -23,17 +23,17 @@ Extension of the DQN  algorithm are treated in the following order:
 \begin{itemize}
 \item DQN~\cite{mnih2015humanlevel}
 \item DDQN~\cite{Hasselt2016}
-\item Dueling network Architecture~\cite{BellemareDM17}
+\item Dueling network Architecture~\cite{Wang2016}
 \end{itemize}
 
 
-For now, I only covered these 3 items: DQN, DDQN, and dueling. I am currently working on the PER (Prioritized Experience Replay). My plan is to understand, implement and test the next methods too
+For now, I only covered these 3 items: DQN, DDQN, and dueling. I am currently working on the PER (Prioritized Experience Replay). My plan is to understand, implement and test the next methods too:
 
 \begin{itemize}
-\item Prioritized experience replay
-\item A distributional perspective on reinforcement learning
-\item Rainbow: combining improvements in deep reinforcement learning 
-\item Distributional reinforcement learning with quantile 
+\item Prioritized experience replay~\cite{Schaul2018}
+\item A distributional perspective on reinforcement learning~\cite{BellemareDM17}
+\item Rainbow: combining improvements in deep reinforcement learning~\cite{Hessel2017} 
+\item Distributional reinforcement learning with quantile~\cite{DabneyRBM18} 
 \end{itemize}
 
 \section{Testing environment}
@@ -50,13 +50,14 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 \end{itemize}
  
 The task is episodic. In order to solve the environment, the agent must get an average score of +13 over 100 consecutive episodes.
-
-\begin{figure}[!htbp]
-  \includegraphics[width=0.9\textwidth]{../PNG/env.png}
+\begin{center}
+\begin{figure}[H]
+  \center
+  \includegraphics[width=0.7\textwidth]{../PNG/env.png}
   \caption{Banana environment}
   \label{fig:banana_environment}
 \end{figure}
-
+\end{center}
 \section{State of the Art}
 \subsection{Definition}
 I consider in this project an agent that interacts with the environment in a sequence of observations $s$, actions $a$, rewards $r$, new states $s'$ such as $(s,a,r,s')$.
@@ -95,7 +96,7 @@ This is why a function approximitor $Q(s,a,\theta)$ is used to estimate the acti
 I used here a $Q$ network for approximator where $\theta$ are the weights of the network.
 
 
-\subsection*{Deep Q network or DQN}
+\subsection{Deep Q network or DQN}
 DQN~\cite{mnih2015humanlevel} combine reinforcement learning with deep neural networks. 
 The idea is to used a deep neural network such as a convolutional neural network to approximate the optimal action-value function.
  
@@ -137,7 +138,7 @@ The loss function is optimized using a stochastic gradient descent.
 The method is also off policy (memory replay). We ensure the exploration of the state and space by using the $\epsilon$-greedy policy.
 
 
-\subsection*{Double Deep Q network or DDQN}
+\subsection{Double Deep Q network or DDQN}
 DQN tend to overestimate the action values especially when the function approximator is inaccurate or the environment is noisy. The problem with the overestimation is that it is not evenly distributed. Therefore, it may result in a modification of the action choice and lead to a sub-optimal policy.
 
 DQN uses the same values both to select and to evaluate an action where DDQN~\cite{Hasselt2016} uses the online weights $\theta_i$ to select an action while the target weights $\theta_i^-$ evaluate the action. 
@@ -161,7 +162,7 @@ The DDQN equation:
 	y_{DDQN}=r+\gamma Q(s',argmax_{a'} Q(s',a',\theta_i);\theta_i^-)
 \end{equation}
 
-\subsection*{Dueling Network architecture}
+\subsection{Dueling Network architecture}
 Compared to regular DQN or DDQN networks, the dueling network architecture~\cite{BellemareDM17} separetes the evaluation of the state value function $V(s)$ and the action advantage function $A(s,a)$ before evaluting via aggregation the state action value function $Q(s,a)$.
 
 So, the dueling network can learn which state is valuable or not without having to learn the effect of each action for each state.
@@ -209,7 +210,7 @@ Another possibility which gives more stable results is to subtract by the mean i
 Here, the advantage only needs to change as fast as the mean instead of the optimal action. Also, as we subtract a constant from $A(s,a';\theta,\alpha)$ we do not change the ranking for the action value function estimator $Q(s,a;\theta,\alpha,\beta)$.
 
 
-\section*{Results} 
+\section{Results} 
 \subsection{Models}
 The architecute of the network use by the regular DQN and DDQN is composed of 3 linear layers:
 
